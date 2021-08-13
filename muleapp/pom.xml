@@ -116,8 +116,8 @@
     
     <distributionManagement>
     	<snapshotRepository>
-    		<id>mulerelease</id>
-    		<name>mulerelease</name>
+    		<id>mulerepo1</id>
+    		<name>mulerepo1</name>
     		<url>http://localhost:8081/repository/mulerepo1/</url>
     	</snapshotRepository>
     </distributionManagement>
