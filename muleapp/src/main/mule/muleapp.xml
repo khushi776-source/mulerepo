@@ -4,8 +4,11 @@
 	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="a80afe46-ef51-4cc5-9fdc-657933874e2c" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
 	<flow name="muleappFlow" doc:id="9a8dfc6d-e1c7-48cf-888c-e409402dc24d" >
-		<http:listener doc:name="Listener" doc:id="6e47ca78-eef0-463c-84fa-a951d0863db1" />
+		<http:listener doc:name="Listener" doc:id="6e47ca78-eef0-463c-84fa-a951d0863db1" config-ref="HTTP_Listener_config" path="/flights"/>
 		<set-payload value="Hello World!" doc:name="Set Payload" doc:id="ce12ec56-12da-4cd3-9e48-437ae379f34e" />
 	</flow>
 </mule>
